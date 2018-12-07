@@ -1,0 +1,49 @@
+<html>
+    <head>
+            <Title>BlockChain Voting Application</Title>
+
+            <script type = "text/javascript" 
+            src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+           </script>
+
+    </head>
+
+
+<body>
+    
+
+    <form method="get" action="http://localhost:3008/spawnBrew/Aruna22">
+        <button type="submit">vote</button>
+    </form>
+
+    <button id="driver" type="submit">vote 2</button>
+
+    <a class="asynch_link" href="http://localhost:3009/spawnBrew/Aruna16">Click Here</a>
+
+    <script>
+
+     var namecand = "Shevin";
+
+            $(document).ready(function() {
+			
+            $("#driver").click(function(event){
+               // Do global setting.
+               $.ajaxSetup({
+                  url: "http://localhost:3001/spawnBrew/"+namecand
+               });
+					
+               $.ajax( {
+                  success:function(data) {
+                     $('#stage').html(data);
+                  }
+               });
+            });
+				
+         });
+
+    </script>
+</body>
+
+
+
+</html>
