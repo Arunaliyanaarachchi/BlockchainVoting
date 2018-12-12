@@ -65,7 +65,7 @@
             <div class="row page-titles">
                 <div class="col-md-12 align-self-center">
                     <h1 class="text-themecolor">Graduate Student Election - 2018 Hampton University</h1>
-                    <h4 class="text-themecolor"><a class="asynch_link" href="http://localhost:3005/spawnBrew/DisplayVotes">  Click Here to Display BlockChain</a></h4>
+                    <h4 class="text-themecolor"><a class="asynch_link" href="http://localhost:3003/spawnBrew/DisplayVotes">  Click Here to Display BlockChain</a></h4>
                 </div>
                
               
@@ -214,7 +214,7 @@
                                 <div class="el-card-content">
                                     <h3 class="box-title">lalitha</h3> <small>Student - Computer </small>
                                     <br/> 
-                                    <button class = "btn btn-success" onclick="RecordeVote('Chi Chang');"> Vote As President </button>
+                                    <button class = "btn btn-success" onclick="RecordeVote('lalitha');"> Vote As President </button>
                                     <br/>
                                 </div>
                             </div>
@@ -258,7 +258,14 @@
         function  RecordeVote(CName)
         {
                         // 3002 / 3007 / 3008
-                        $.ajax({url: "http://localhost:3005/spawnBrew/"+CName, success: function(result)
+                        $.ajax(
+                            
+                            
+                            {
+                                
+                                url: "http://localhost:3003/spawnBrew/"+CName, 
+                                
+                                success: function(result)
                         
                         {
                             alert("Your Input Recorded ..!");
